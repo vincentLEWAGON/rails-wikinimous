@@ -11,6 +11,9 @@
     <% @articles.sort_by(&:title).each do |article| %>
       <li><%= link_to article.title, article_path(article) %></li>
       <li><%= article.content %></li>
+      <%= button_to article_path(article), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer cet article ?' }, style: "background: white; border: none;" do %>
+      <%= image_tag("effacer.png", alt: "Supprimer", size: "20x20") %>
+      <% end %>
       <br>
     <% end %>
   </ul>
