@@ -1,0 +1,19 @@
+
+<h1 style="color: red; font-weight: bold;">
+  <%= @article.title %>
+  <span>
+    <%= link_to edit_article_path(@article) do %>
+      ✒️
+    <% end %>
+  </span>
+  <span>
+    <%= link_to article_path(@article), data: { method: "delete", confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" } do %>
+      <%= image_tag("effacer.png", alt: "Effacer", style: "max-width: 20px;") %>
+    <% end %>
+  </span>
+</h1>
+
+<br>
+<p style="color: lightgrey; text-align: justify;"><%= @article.content %></p>
+
+<%= link_to "Retour à la liste des articles", articles_path %>

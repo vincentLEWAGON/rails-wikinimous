@@ -1,0 +1,17 @@
+<!-- FILEPATH: /Users/vincentschmitt/code/vincentLEWAGON/rails-wikinimous/app/views/articles/index.html.erb -->
+
+<h1>Liste des articles
+  <%= link_to new_article_path do %>
+      ✒️
+  <% end %>
+</h1>
+
+<div class="card">
+  <ul>
+    <% @articles.sort_by(&:title).each do |article| %>
+      <li><%= link_to article.title, article_path(article) %></li>
+      <li><%= article.content %></li>
+      <br>
+    <% end %>
+  </ul>
+</div>

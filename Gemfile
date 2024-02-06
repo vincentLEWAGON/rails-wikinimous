@@ -56,7 +56,9 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
+
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+  gem "faker" # A library for generating fake data such as names, addresses, and phone numbers [
 end
 
 group :test do

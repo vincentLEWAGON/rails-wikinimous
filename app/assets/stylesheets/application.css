@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  margin: 20px;
+  padding: 20px;
+  align-self: center;
+
+}
+
+H1 {
+  font-size: 40px;
+  color: #275587;
+  text-align: center;
+}
+
+p, li {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: #103a67;
+  text-align: left;
+}
